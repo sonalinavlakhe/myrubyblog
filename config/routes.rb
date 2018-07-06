@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'pages/about'
+  get 'pages/contact'
+  get 'pages/resources'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   get 'catagories/index'
   get 'catagories/edit'
   get 'catagories/new'
@@ -9,7 +14,11 @@ Rails.application.routes.draw do
   get 'categories/show'
   get 'home/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'posts#index'
+  root 'home#index'
   resources :posts
   resources :categories
+  match '/about' , :to =>'pages#about',:via => [:get, :post]  
+  match '/contact' , :to =>'pages#contact',:via => [:get, :post]
+  match '/resources' , :to =>'pages#resources',:via => [:get, :post]
+  ActiveAdmin.routes(self)
 end
