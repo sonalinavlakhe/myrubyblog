@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This is blog application with comment facility , along with admin user login is used with the help of active admin gem.
@@ -25,3 +26,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# myrubyblog
+A blog application with comment facility
+>>>>>>> af6361778bae50420999106759776b511830a70f
