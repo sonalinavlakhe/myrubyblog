@@ -1,5 +1,8 @@
 # README
 
+This is blog application with comment facility , along with admin user login is used with the help of active admin gem.
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

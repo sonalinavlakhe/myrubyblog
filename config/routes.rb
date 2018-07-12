@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :post_comments
   get 'pages/about'
   get 'pages/contact'
   get 'pages/resources'
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :posts
   resources :categories
-  match '/about' , :to =>'pages#about',:via => [:get, :post]  
+  match '/about' , :to =>'pages#about',:via => [:get, :post]
   match '/contact' , :to =>'pages#contact',:via => [:get, :post]
   match '/resources' , :to =>'pages#resources',:via => [:get, :post]
   ActiveAdmin.routes(self)
